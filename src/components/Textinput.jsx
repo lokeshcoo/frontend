@@ -1,14 +1,20 @@
 import React from 'react'
 
-const Textinput = ({ id, label, placeholer = "", type = 'text', disabled = false, readOn }) => {
+const TextInput = ({ id, label, value = "", placeholder = "", inputType = "text", disabled = false, readOnly = false }) => {
     return (
         <div>
-            <label htmlFor={id}>{label}</label>
+            <label className='mb-2 font-bold' htmlFor={id}>{label}</label>
             <input
-
-                type='text'></input>
+                id={id}
+                className='w-full p-2 border-2 rounded-md'
+                type={inputType}
+                placeholder={placeholder}
+                // disabled={disabled}
+                // readOnly={readOnly}
+                // value={value}
+            />
         </div>
     )
 }
 
-export default Textinput
+export default TextInput
